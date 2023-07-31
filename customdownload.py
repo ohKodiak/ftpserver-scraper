@@ -60,11 +60,8 @@ def traverse_iterative():
             text = link.text
             href = link.get_attribute("href")
             #if the link is a file, download it by clicking on it
-            if text.endswith(".tif"): #or text.endswith(".pdf") or text.endswith(".zip"):
+            if text.endswith(".nc"): #or text.endswith(".pdf") or text.endswith(".zip"):
                 link.click()
-                count += 1
-                if count == 3:
-                    sys.exit()
                 print("downloaded")
                 print(text)
         
